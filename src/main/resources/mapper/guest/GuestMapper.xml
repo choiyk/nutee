@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"              
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.nutee.server.repository.mapper.GuestMapper">
+
+	<insert id="signUp" useGeneratedKeys="true" keyProperty="id">
+		INSERT USER (nickname, password, studentNumber, email) VALUES (#{nickname}, #{password}, #{studentNumber}, #{email})
+	</insert>
+
+</mapper>

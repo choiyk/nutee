@@ -25,7 +25,4 @@
 	</beans:bean>
 
 	<context:component-scan base-package="kr.nutee.server" />
-
-
-
 </beans:beans>
