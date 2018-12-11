@@ -4,7 +4,10 @@
 <mapper namespace="kr.nutee.server.repository.mapper.GuestMapper">
 
 	<insert id="signUp" useGeneratedKeys="true" keyProperty="id">
-		INSERT USER (nickname, password, studentNumber, email) VALUES (#{nickname}, #{password}, #{studentNumber}, #{email})
+		INSERT INTO USER (nickname, password, studentNumber, email)
+		SELECT #{nickname}, #{password}, #{studentNumber}, #{email} FROM USER
+		WHERE NOT EXISTS (SELECT * FROM USER WHERE studentNumber = #{studentNumber})
+		LIMIT 1;
 	</insert>
 
 </mapper>

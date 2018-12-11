@@ -7,6 +7,9 @@ import org.springframework.stereotype.Repository;
 import kr.nutee.server.dto.User;
 import kr.nutee.server.repository.mapper.GuestMapper;
 
+/**
+ * GuestMapper Implementation
+ */
 @Repository
 public class GuestMapperImpl implements GuestMapper {
 
@@ -14,8 +17,8 @@ public class GuestMapperImpl implements GuestMapper {
 	private SqlSessionTemplate sqlSession;
 
 	@Override
-	public void signUp(User user) {
-		sqlSession.insert("signUp", user);
+	public int signUp(final User user) {
+		return sqlSession.insert("signUp", user);
 	}
 
 }
