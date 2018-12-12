@@ -8,7 +8,7 @@ import kr.nutee.server.dto.User;
 public interface GuestService {
 
 	/**
-	 * @param User nickname, password, studentNumber, email
+	 * @param User object to be sign up
 	 * @return insert recode count
 	 */
 	public abstract int signUp(User user);

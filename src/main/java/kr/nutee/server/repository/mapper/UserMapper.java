@@ -3,13 +3,12 @@ package kr.nutee.server.repository.mapper;
 import kr.nutee.server.dto.User;
 
 /**
- * GuestMapper interface
+ * UserMapper interface
  */
-public interface GuestMapper {
-	
+public interface UserMapper {
+
 	/**
 	 * @param User object to be sign up
-	 * @return insert record count
 	 */
-	public abstract int signUp(User user);
+	public abstract void update(User user);
 }

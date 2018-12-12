@@ -22,7 +22,7 @@ public class GuestController {
 	GuestService guestService;
 
 	/**
-	 * @param User nickname, password, studentNumber and email
+	 * @param User Object to be sign up
 	 * @return ResponseEntity<Void>
 	 */
 	@PostMapping("/signUp")
